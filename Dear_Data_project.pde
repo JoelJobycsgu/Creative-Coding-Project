@@ -5,5 +5,5 @@ void setup()
 }
 void draw()
 {
-  rect(200, 40, 600, 40)
+  ellipse(200, 40, 600, 40)
 }
