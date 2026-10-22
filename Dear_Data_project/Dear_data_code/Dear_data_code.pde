@@ -19,12 +19,12 @@ void setup() {
 
 void draw() {
   background(255);
- 
-  for(int i=1; i<data.length; i=i+1){
-    String [] values = split(data[i], ',');
-    
-    
-    println(values);
+  // key Press technique for each day
+      for (int i=1; i<data.length; i=i+1) {
+        String [] values = split(data[i], ',');
+      }
+
+      println(values);
+    }
+    noLoop();
   }
-  noLoop();
-}
