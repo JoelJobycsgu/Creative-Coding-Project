@@ -1,12 +1,17 @@
 String[] data;
 int[] day;
-int[] Communication;
-int[] Entertainment;
-int[] Socials;
-int[] Information;
+int[] Communication; // Yellow
+int[] Entertainment; // Green
+int[] Socials; // Purple
+int[] Information; // Red
+
 void setup() {
   size(1000, 600);
-
+  color blue = color(#158BE3);
+  color green = color(#17E32C);
+  color yellow = color(#F7ED14);
+  color purple = color(#8F1CC9);
+   
   data = loadStrings("Hourly usage.csv");
 
   println(data.length);
@@ -20,11 +25,10 @@ void setup() {
 void draw() {
   background(255);
   // key Press technique for each day
-      for (int i=1; i<data.length; i=i+1) {
-        String [] values = split(data[i], ',');
-      }
-
-      println(values);
-    }
-    noLoop();
+  for (int i=1; i<data.length; i=i+1) {
+    String [] token = split(data[i], ',');
   }
+
+  println(data);
+  noLoop();
+}
