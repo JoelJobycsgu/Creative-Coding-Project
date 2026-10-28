@@ -6,14 +6,14 @@ int[] Socials; // Purple
 int[] Information; // Blue
 int[] Total;
 void setup() {
-  size(1000, 600);
+  size(600, 300);
   color blue = color(#158BE3);
   color green = color(#17E32C);
   color yellow = color(#F7ED14);
   color purple = color(#8F1CC9);
 
   data = loadStrings("Hourly usage.csv");
-
+  
   println(data.length);
   day = new int[data.length - 1];
   Communication = new int[data.length - 1];
@@ -33,10 +33,10 @@ void draw() {
   // key Press technique for each day
   for (int i=1; i<data.length; i=i+1) {
     String [] token = split(data[i], ',');
+    println(data[i]);
   }
   int totalMinutes = calculateTotal(15);
 
   println("Total usage: " + totalMinutes); // prints out the return value
-  println(data);
   noLoop();
 }
