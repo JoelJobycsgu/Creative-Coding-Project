@@ -3,8 +3,8 @@ int[] day;
 int[] Communication; // Yellow
 int[] Entertainment; // Green
 int[] Socials; // Purple
-int[] Information; // Red
-
+int[] Information; // Blue
+int[] Total;
 void setup() {
   size(1000, 600);
   color blue = color(#158BE3);
@@ -20,6 +20,7 @@ void setup() {
   Entertainment = new int[data.length -1];
   Socials = new int[data.length - 1];
   Information = new int[data.length - 1];
+  Total = new int[data.length -1];
 }
 
 int calculateTotal(int i) {   // Created a method
