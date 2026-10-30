@@ -5,8 +5,10 @@ int[] Entertainment; // Green
 int[] Socials; // Purple
 int[] Information; // Blue
 int[] Total;
+
+
 void setup() {
-  size(600, 300);
+  size(600, 500);
   color blue = color(#158BE3);
   color green = color(#17E32C);
   color yellow = color(#F7ED14);
@@ -30,13 +32,19 @@ int calculateTotal(int i) {   // Created a method
 
 void draw() {
   background(255);
-  // key Press technique for each day
+  println(data[0]);                                                                                          
   for (int i=1; i<data.length; i=i+1) {
     String [] token = split(data[i], ',');
     println(data[i]);
+    
+    line(75, 30, 75, 420); 
   }
+  
   int totalMinutes = calculateTotal(15);
+  println(totalMinutes);
 
   println("Total usage: " + totalMinutes); // prints out the return value
   noLoop();
 }
+
+// key press for each day
