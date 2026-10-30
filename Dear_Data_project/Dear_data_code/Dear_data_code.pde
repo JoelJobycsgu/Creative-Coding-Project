@@ -14,7 +14,7 @@ void setup() {
   color yellow = color(#F7ED14);
   color purple = color(#8F1CC9);
 
-  data = loadStrings("Hourly usage.csv");
+  data = loadStrings("Hourly usage.csv"); // Loads all the strings from the CSV file
   
   println(data.length);
   day = new int[data.length - 1];
