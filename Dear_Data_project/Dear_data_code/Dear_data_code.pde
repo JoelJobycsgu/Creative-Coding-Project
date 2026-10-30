@@ -33,11 +33,12 @@ int calculateTotal(int i) {   // Created a method
 void draw() {
   background(255);
   println(data[0]);                                                                                          
-  for (int i=1; i<data.length; i=i+1) {
-    String [] token = split(data[i], ',');
+  for (int i=1; i<data.length; i=i+1) {   // Goes through every array
+    String [] token = split(data[i], ',');   // Splits the data using comma
     println(data[i]);
     
     line(75, 30, 75, 420); 
+    line(75, 420, 500, 420); 
   }
   
   int totalMinutes = calculateTotal(15);
