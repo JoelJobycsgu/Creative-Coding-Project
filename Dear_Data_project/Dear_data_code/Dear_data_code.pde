@@ -25,11 +25,6 @@ void setup() {
   Total = new int[data.length -1];
 }
 
-int calculateTotal(int i) {   // Created a method
-  int total = Entertainment[i] + Socials[i] + Information[i] + Communication[i];
-  return total; // returns the value
-}
-
 void draw() {
   background(255);
   println(data[0]);                                                                                          
