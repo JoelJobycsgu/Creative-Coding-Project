@@ -40,8 +40,7 @@ void draw() {
     rect(75, 40, 200, 20);
   }
   
-  int totalMinutes = calculateTotal(15);
-  println(totalMinutes);
+
 
   println("Total usage: " + totalMinutes); // prints out the return value
   noLoop(); // Stops from looping the same data over
