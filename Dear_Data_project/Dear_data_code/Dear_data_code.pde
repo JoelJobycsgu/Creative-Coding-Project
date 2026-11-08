@@ -35,8 +35,8 @@ void draw() {
     fill(0); // Set font colour as black
     textSize(20); // Text size
     textAlign(LEFT);
-    line(75, 30, 75, 436); // X-Axis Graph
-    line(75, 436, 500, 420); // Y-Axis Graph
+    line(75, 30, 75, 436); // Y-Axis Graph
+    line(75, 436, 500, 420); // X-Axis Graph
 
     for (int j=0; j<24; j=j+1) {
       float y = map(i, 0, 23, 30, 420);
