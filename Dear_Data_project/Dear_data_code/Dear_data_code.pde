@@ -8,13 +8,14 @@ int[] Total;
 
 
 void setup() {
-  size(600, 500);
+  size(600, 500); // Size of the canvas
   color blue = color(#158BE3);
   color green = color(#17E32C);
   color yellow = color(#F7ED14);
   color purple = color(#8F1CC9);
 
   data = loadStrings("Hourly usage.csv"); // Loads all the strings from the CSV file
+  textAlign(LEFT);
   
   println(data.length);
   day = new int[data.length - 1];
@@ -33,7 +34,7 @@ void draw() {
     println(data[i]);
     
     
-    
+    textSize(10);
     line(75, 30, 75, 420); 
     line(75, 420, 500, 420); 
     
@@ -42,8 +43,9 @@ void draw() {
   
 
 
-  println("Total usage: " + totalMinutes); // prints out the return value
+  
   noLoop(); // Stops from looping the same data over
 }
+
 
 // key press for each day
