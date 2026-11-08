@@ -8,7 +8,7 @@ int[] Total;
 
 
 void setup() {
-  size(600, 700); // Size of the canvas
+  size(600, 600); // Size of the canvas
   color blue = color(#158BE3);
   color green = color(#17E32C);
   color yellow = color(#F7ED14);
@@ -35,17 +35,19 @@ void draw() {
 
   line(75, 30, 75, 436); // Y-Axis Graph
   
+  // Read the CSV data
   for (int i=1; i<data.length; i=i+1) {   // Goes through every array
     String [] token = split(data[i], ',');   // Splits the data using comma
     println(data[i]);
-
+    
+    noLoop(); // Stops from looping the same data over
+  }
     for (int j=0; j<24; j++) {
-      float y = map(i, 0, 23, 30, 420);
-      text(nf(i, 2) + ":00", 23, y+4); // Display the hour
+      float y = map(j, 0, 23, 30, 420);
+      text(nf(j, 2) + ":00", 23, y+4); // Display the hour
       line(75, y, 500, y);  // Creates mutiple lines
     }
-  }
-  noLoop(); // Stops from looping the same data over
+
 }
 
 
