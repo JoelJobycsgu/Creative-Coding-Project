@@ -33,8 +33,9 @@ void draw() {
   textSize(20); // Text size
   textAlign(LEFT);
 
-  line(75, 30, 75, 436); // Y-Axis Graph
-  
+  line(75, 30, 75, 505); // Y-Axis Graph
+  line(75, 505, 505, 505); // X-Axis Graph
+ 
   // Read the CSV data
   for (int i=1; i<data.length; i=i+1) {   // Goes through every array
     String [] token = split(data[i], ',');   // Splits the data using comma
