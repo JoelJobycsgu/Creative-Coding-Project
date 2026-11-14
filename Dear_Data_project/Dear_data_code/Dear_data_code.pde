@@ -42,8 +42,8 @@ void draw() {
     
     noLoop(); // Stops from looping the same data over
   }
-    for (int j=0; j<24; j++) {
-      float y = map(j, 0, 23, 30, 420);
+    for (int j=0; j<24; j=j+1) {
+      float y = map(j, 0, 23, 40, 500);
       text(nf(j, 2) + ":00", 23, y+4); // Display the hour
       line(75, y, 500, y);  // Creates mutiple lines
     }
