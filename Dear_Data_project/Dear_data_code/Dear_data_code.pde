@@ -36,9 +36,8 @@ void draw() {
 
   if (showTotal == true) {
     text("Selected view Total", 300, 50);
-  } 
-  else {
-  text("Selected view: Day " + selectedDay, 300, 50);
+  } else {
+    text("Selected view: Day " + selectedDay, 300, 50);
   }
 
   line(75, 30, 75, 505); // Y-Axis Graph
@@ -52,10 +51,19 @@ void draw() {
 }
 
 void keyPressed() {
-  if (key >= '1' && key <='5') {
+  if (key == '1') {
     selectedDay = key - '0';
     showTotal = false;
-  } else if (key == 't'||key == 'T') {
+  }
+  else if (key == '2'){
+  }
+  else if (key == '3'){
+  }
+  else if (key == '4'){
+  }
+  else if(key == '5'){
+  }
+  else if (key == 't'||key == 'T') {
     showTotal = true;
   }
 }
