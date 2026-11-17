@@ -54,6 +54,7 @@ void keyPressed() {
   if (key == '1') {
     selectedDay = key - '0';
     showTotal = false;
+    DisplayDay1();
   }
   else if (key == '2'){
   }
