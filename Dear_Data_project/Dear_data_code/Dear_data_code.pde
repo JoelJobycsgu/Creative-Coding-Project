@@ -12,7 +12,8 @@ boolean showTotal = false;
 void setup() {
   size(600, 600); // Size of the canvas
   data = loadStrings("Hourly usage.csv"); // Loads all the strings from the CSV file
-
+  
+  
   println(data.length); 
   day = new int[data.length - 1]; 
   Communication = new int[data.length - 1];
@@ -35,6 +36,7 @@ void setup() {
     Information[k] = int(token[4]);
     Communication[k] = int(token[5]);
     Total[k] = int(token[6]);
+    
 }
 }
 void draw() {
@@ -59,7 +61,7 @@ void draw() {
     text(nf(j, 2) + ":00", 23, labelY + 4);
   }
 
-  // Bars 
+  // Displaying the Bars 
   if (!showTotal) {
     for (int i = 0; i < day.length; i++) {
       int sum = Communication[i] + Entertainment[i] + Socials[i] + Information[i];
