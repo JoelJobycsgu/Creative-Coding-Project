@@ -37,9 +37,9 @@ void setup() {
 }
 }
 void draw() {
-  background(255);
+  background(255); // White background colour
 
-  fill(0);
+  fill(0); // Black font colour
   textSize(20);
   textAlign(LEFT);
 
@@ -64,8 +64,8 @@ void draw() {
       int sum = Communication[i] + Entertainment[i] + Socials[i] + Information[i];
       if (day[i] == selectedDay && sum > 0) {
         float barY = map(hour[i], 0, 23, 40, 500);
-        DisplayDay1 bar = new DisplayDay1(barY, Communication[i], Entertainment[i], Socials[i], Information[i]);
-        bar.display();
+        DisplayDay bar = new DisplayDay(barY, Communication[i], Entertainment[i], Socials[i], Information[i]);
+        bar.display(); // 
       }
     }
   }
