@@ -13,8 +13,8 @@ void setup() {
   size(600, 600); // Size of the canvas
   data = loadStrings("Hourly usage.csv"); // Loads all the strings from the CSV file
 
-  println(data.length);
-  day = new int[data.length - 1];
+  println(data.length); 
+  day = new int[data.length - 1]; 
   Communication = new int[data.length - 1];
   Entertainment = new int[data.length -1];
   Information = new int[data.length - 1];
@@ -24,9 +24,10 @@ void setup() {
 
   // Reads the CSV data
   for (int i = 1; i < data.length; i++) {
-    String[] token = split(data[i], ',');
+    String[] token = split(data[i], ','); // Splits the data separately using the commas
     int k = i - 1;
-
+    
+    // Extracts the data from the CSV file
     day[k] = int(token[0]);
     hour[k] = int(split(token[1], ':')[0]);
     Entertainment[k] = int(token[2]);
@@ -65,7 +66,7 @@ void draw() {
       if (day[i] == selectedDay && sum > 0) {
         float barY = map(hour[i], 0, 23, 40, 500);
         DisplayDay bar = new DisplayDay(barY, Communication[i], Entertainment[i], Socials[i], Information[i]);
-        bar.display(); // 
+        bar.display(); 
       }
     }
   }
